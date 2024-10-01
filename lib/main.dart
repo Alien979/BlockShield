@@ -39,7 +39,11 @@ Future<void> initializeApp() async {
   final log = Logger('BlockShield');
 
   try {
-    await dotenv.load(fileName: ".env");
+    // Try to load .env file, but continue if it doesn't exist
+    await dotenv.load(fileName: ".env").catchError((error) {
+      log.warning('Failed to load .env file: $error');
+    });
+
     await Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform);
 
