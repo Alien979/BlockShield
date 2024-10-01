@@ -1,0 +1,58 @@
+Folder PATH listing for volume Windows-SSD
+Volume serial number is 52B2-60B4
+C:.
+�   .firebaserc
+�   .flutter-plugins
+�   .flutter-plugins-dependencies
+�   .gitignore
+�   .metadata
+�   analysis_options.yaml
+�   blockshield.iml
+�   database.rules.json
+�   firebase.json
+�   firestore.indexes.json
+�   firestore.rules
+�   output.txt
+�   package-lock.json
+�   package.json
+�   pubspec.lock
+�   pubspec.yaml
+�   README.md
+�   storage.rules
+�   
+
+
++---lib
+�   �   firebase_options.dart
+�   �   main.dart
+�   �   
+�   +---models
+�   �       threat.dart
+�   �       
+�   +---pages
+�   �       dashboard_page.dart
+�   �       data_submission_page.dart
+�   �       login_page.dart
+�   �       sign_in_page.dart
+�   �       threat_detail_page.dart
+�   �       threat_list_page.dart
+�   �       user_profile_page.dart
+�   �       
+�   +---providers
+�   �       threat_provider.dart
+�   �       user_provider.dart
+�   �       
+�   +---screens
+�   �       dashboard_screen.dart
+�   �       data_submission_screen.dart
+�   �       login_screen.dart
+�   �       
+�   +---services
+�           ai_service.dart
+�           auth_service.dart
+�           ethereum_service.dart
+�           mock_data_service.dart
+�           notification_service.dart
+�           notification_service_mobile.dart
+�           notification_service_web.dart
+�   
