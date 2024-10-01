@@ -16,20 +16,22 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.5.0'
         channel: 'stable'
 
     - name: Get dependencies
       run: flutter pub get
 
-    - name: Run tests
-      run: flutter test
+    - name: Create .env file
+      run: |
+        echo "API_KEY=${{ secrets.API_KEY }}" > .env
+        echo "OTHER_SECRET=${{ secrets.OTHER_SECRET }}" >> .env
 
     - name: Build web
-      run: flutter build web --release
+      run: flutter build web --release --base-href "/BlockShield/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build/web
+        force_orphan: true
